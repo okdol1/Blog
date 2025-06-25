@@ -16,6 +16,7 @@ import Table from "./Table";
 import TableRow from "./Table/TableRow";
 import TableCell from "./Table/TableCell";
 import Callout from "./Callout";
+import * as LocalComponents from "./local";
 
 export const markdownComponents = {
   h1: CustomHeading1,
@@ -37,4 +38,5 @@ export const markdownComponents = {
   TableCell,
   Callout,
   CustomLink,
+  ...LocalComponents,
 };

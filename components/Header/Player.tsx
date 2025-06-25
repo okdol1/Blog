@@ -1,5 +1,5 @@
 import { memo, useState } from "react";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 import VolumeOffIcon from "@/assets/icons/volume_off.svg";
 import VolumeUpIcon from "@/assets/icons/volume_up.svg";
 import ArrowBackIcon from "@/assets/icons/arrow_back.svg";
@@ -7,7 +7,7 @@ import ArrowBackIcon from "@/assets/icons/arrow_back.svg";
 const MemoizedVolumeOffIcon = memo(VolumeOffIcon);
 const MemoizedVolumeUpIcon = memo(VolumeUpIcon);
 
-const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
+// const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 interface PlayerProps {
   isVisible: boolean;
@@ -49,7 +49,7 @@ ${isPlayerOpen ? "" : "flex-col"}
       </div>
 
       <div className={isPlayerOpen ? "" : "hidden"}>
-        <ReactPlayer
+        {/* <ReactPlayer
           url="https://www.youtube.com/watch?v=KvMY1uzSC1E" // * Cyberpunk: Edgerunners | “I Really Want to Stay At Your House” by Rosa Walton | Music Video
           playing
           loop
@@ -57,7 +57,7 @@ ${isPlayerOpen ? "" : "flex-col"}
           width="100%"
           height="100%"
           muted={isMuted}
-        />
+        /> */}
       </div>
     </div>
   );
